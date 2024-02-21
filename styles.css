@@ -9,7 +9,7 @@
     --cel-background: #87afff;
     --cel-disabled: #3A3A5F;
     --x-color: #FF3562;
-    --o-color: #E9EB87;
+    --o-color: #ffe62c;
 }
 *{
     box-sizing: border-box;
@@ -56,20 +56,20 @@ input{
     cursor: pointer;
     border-radius: var(--main-border-radius);
     background-color: var(--main-text-color);
+    border: none;
 }
 
 input:enabled{
     transition: .2s ease-out;
-    border: none;
 }
 
-input:enabled:hover{
-    background-color: var(--cel-background);
-    transition: .5s ease;
+/* change hover color on turn */
+input:enabled.xTurn:hover{
+    background-color: var(--x-color);
 }
 
-input:enabled:active{
-    outline: none;
+input:enabled.oTurn:hover{
+    background-color: var(--o-color);
 }
 
 /* when inputs are disabled */
@@ -104,8 +104,13 @@ button{
     border-radius: var(--main-border-radius);
 }
 
+button:hover{
+    background-color: var(--x-color);
+    color: var(--main-text-color);
+}
+
 button:active{
-    outline: none;
+    transform: translateY(2px);
 }
 
 /* result */

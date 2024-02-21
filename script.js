@@ -353,8 +353,16 @@ function check() {
     // Printing Result
     if (flag == 1) {
       document.getElementById("result").innerHTML = "Player X Turn";
+      document.querySelectorAll("input").forEach((field) => {
+        field.classList.add("xTurn");
+        field.classList.remove("oTurn");
+      });
     } else {
       document.getElementById("result").innerHTML = "Player 0 Turn";
+      document.querySelectorAll("input").forEach((field) => {
+        field.classList.add("oTurn");
+        field.classList.remove("xTurn");
+      });
     }
   }
 }
