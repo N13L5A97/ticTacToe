@@ -9,8 +9,10 @@
   <body>
     <header>
       <h1>TIC TAC TOE</h1>
-      <p>Player 1: X</p>
-      <p>Player 2: O</p>
+      <section>
+        <p>Player 1: X</p>
+        <p>Player 2: O</p>
+      </section>
     </header>
     <main>
       <section class="game">
@@ -30,7 +32,7 @@
           <input readonly type="text" id="c9" onclick="setValueC9(); check();" />
         </div>
       </section>
-      <button onclick="reset()">RESET</button>
+      <button onclick="reset()">Reset</button>
       <p id="result"></p>
     </main>
     <script src="./script.js"></script>

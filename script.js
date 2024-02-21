@@ -154,9 +154,9 @@ function check() {
       field.disabled = true;
     });
 
-    c1field.classList.add("win");
-    c2field.classList.add("win");
-    c3field.classList.add("win");
+    c1field.classList.add("xWin");
+    c2field.classList.add("xWin");
+    c3field.classList.add("xWin");
   } else if (c1Value == "X" && c4Value == "X" && c7Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
@@ -165,9 +165,9 @@ function check() {
       field.disabled = true;
     });
 
-    c1field.classList.add("win");
-    c4field.classList.add("win");
-    c7field.classList.add("win");
+    c1field.classList.add("xWin");
+    c4field.classList.add("xWin");
+    c7field.classList.add("xWin");
   } else if (c7Value == "X" && c8Value == "X" && c9Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
@@ -176,9 +176,9 @@ function check() {
       field.disabled = true;
     });
 
-    c7field.classList.add("win");
-    c8field.classList.add("win");
-    c9field.classList.add("win");
+    c7field.classList.add("xWin");
+    c8field.classList.add("xWin");
+    c9field.classList.add("xWin");
   } else if (c3Value == "X" && c6Value == "X" && c9Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
@@ -187,9 +187,9 @@ function check() {
       field.disabled = true;
     });
 
-    c3field.classList.add("win");
-    c6field.classList.add("win");
-    c9field.classList.add("win");
+    c3field.classList.add("xWin");
+    c6field.classList.add("xWin");
+    c9field.classList.add("xWin");
   } else if (c1Value == "X" && c5Value == "X" && c9Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
@@ -198,9 +198,9 @@ function check() {
       field.disabled = true;
     });
 
-    c1field.classList.add("win");
-    c5field.classList.add("win");
-    c9field.classList.add("win");
+    c1field.classList.add("xWin");
+    c5field.classList.add("xWin");
+    c9field.classList.add("xWin");
   } else if (c3Value == "X" && c5Value == "X" && c7Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
@@ -209,9 +209,9 @@ function check() {
       field.disabled = true;
     });
 
-    c3field.classList.add("win");
-    c5field.classList.add("win");
-    c7field.classList.add("win");
+    c3field.classList.add("xWin");
+    c5field.classList.add("xWin");
+    c7field.classList.add("xWin");
   } else if (c2Value == "X" && c5Value == "X" && c8Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
@@ -220,9 +220,9 @@ function check() {
       field.disabled = true;
     });
 
-    c2field.classList.add("win");
-    c5field.classList.add("win");
-    c8field.classList.add("win");
+    c2field.classList.add("xWin");
+    c5field.classList.add("xWin");
+    c8field.classList.add("xWin");
   } else if (c4Value == "X" && c5Value == "X" && c6Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
@@ -231,9 +231,9 @@ function check() {
       field.disabled = true;
     });
 
-    c4field.classList.add("win");
-    c5field.classList.add("win");
-    c6field.classList.add("win");
+    c4field.classList.add("xWin");
+    c5field.classList.add("xWin");
+    c6field.classList.add("xWin");
   }
 
   // Checking if Player 0 won
@@ -250,9 +250,9 @@ function check() {
       field.disabled = true;
     });
 
-    c1field.classList.add("win");
-    c2field.classList.add("win");
-    c3field.classList.add("win");
+    c1field.classList.add("oWin");
+    c2field.classList.add("oWin");
+    c3field.classList.add("oWin");
   } else if (
     (c1Value == "0" || c1Value == "0") &&
     (c4Value == "0" || c4Value == "0") &&
@@ -265,9 +265,9 @@ function check() {
       field.disabled = true;
     });
 
-    c1field.classList.add("win");
-    c4field.classList.add("win");
-    c7field.classList.add("win");
+    c1field.classList.add("oWin");
+    c4field.classList.add("oWin");
+    c7field.classList.add("oWin");
   } else if (c7Value == "0" && c8Value == "0" && c9Value == "0") {
     document.getElementById("result").innerHTML = "Player 0 won";
 
@@ -276,9 +276,9 @@ function check() {
       field.disabled = true;
     });
 
-    c7field.classList.add("win");
-    c8field.classList.add("win");
-    c9field.classList.add("win");
+    c7field.classList.add("oWin");
+    c8field.classList.add("oWin");
+    c9field.classList.add("oWin");
   } else if (c3Value == "0" && c6Value == "0" && c9Value == "0") {
     document.getElementById("result").innerHTML = "Player 0 won";
 
@@ -287,9 +287,9 @@ function check() {
       field.disabled = true;
     });
 
-    c3field.classList.add("win");
-    c6field.classList.add("win");
-    c9field.classList.add("win");
+    c3field.classList.add("oWin");
+    c6field.classList.add("oWin");
+    c9field.classList.add("oWin");
   } else if (c1Value == "0" && c5Value == "0" && c9Value == "0") {
     document.getElementById("result").innerHTML = "Player 0 won";
 
@@ -298,9 +298,9 @@ function check() {
       field.disabled = true;
     });
 
-    c1field.classList.add("win");
-    c5field.classList.add("win");
-    c9field.classList.add("win");
+    c1field.classList.add("oWin");
+    c5field.classList.add("oWin");
+    c9field.classList.add("oWin");
   } else if (c3Value == "0" && c5Value == "0" && c7Value == "0") {
     document.getElementById("result").innerHTML = "Player 0 won";
 
@@ -309,9 +309,9 @@ function check() {
       field.disabled = true;
     });
 
-    c3field.classList.add("win");
-    c5field.classList.add("win");
-    c7field.classList.add("win");
+    c3field.classList.add("oWin");
+    c5field.classList.add("oWin");
+    c7field.classList.add("oWin");
   } else if (c2Value == "0" && c5Value == "0" && c8Value == "0") {
     document.getElementById("result").innerHTML = "Player 0 won";
 
@@ -320,9 +320,9 @@ function check() {
       field.disabled = true;
     });
 
-    c2field.classList.add("win");
-    c5field.classList.add("win");
-    c8field.classList.add("win");
+    c2field.classList.add("oWin");
+    c5field.classList.add("oWin");
+    c8field.classList.add("oWin");
   } else if (c4Value == "0" && c5Value == "0" && c6Value == "0") {
     document.getElementById("result").innerHTML = "Player 0 won";
 
@@ -331,9 +331,9 @@ function check() {
       field.disabled = true;
     });
 
-    c4field.classList.add("win");
-    c5field.classList.add("win");
-    c6field.classList.add("win");
+    c4field.classList.add("oWin");
+    c5field.classList.add("oWin");
+    c6field.classList.add("oWin");
   }
 
   // Checking if there is a tie
@@ -366,7 +366,8 @@ function reset() {
 
   // remove win class
   allFields.forEach((field) => {
-    field.classList.remove("win");
+    field.classList.remove("oWin");
+    field.classList.remove("xWin");
   });
 }
 
