@@ -1,40 +1,4 @@
-// Function called whenever user tab on any box
-function check() {
-  // Setting DOM to all boxes or input field
-
-  const c1field = document.getElementById("c1");
-  const c2field = document.getElementById("c2");
-  const c3field = document.getElementById("c3");
-  const c4field = document.getElementById("c4");
-  const c5field = document.getElementById("c5");
-  const c6field = document.getElementById("c6");
-  const c7field = document.getElementById("c7");
-  const c8field = document.getElementById("c8");
-  const c9field = document.getElementById("c9");
-
-  const allFields = [
-    c1field,
-    c2field,
-    c3field,
-    c4field,
-    c5field,
-    c6field,
-    c7field,
-    c8field,
-    c9field,
-  ];
-
-  const c1Value = c1field.value;
-  const c2Value = c2field.value;
-  const c3Value = c3field.value;
-  const c4Value = c4field.value;
-  const c5Value = c5field.value;
-  const c6Value = c6field.value;
-  const c7Value = c7field.value;
-  const c8Value = c8field.value;
-  const c9Value = c9field.value;
-
-  // Check turn and set value
+// Check turn and set value
 flag = 1;
 function setValueC1() {
   if (flag == 1) {
@@ -143,6 +107,42 @@ function setValueC9() {
     flag = 1;
   }
 }
+
+// Function called whenever user tab on any box
+function check() {
+  // Setting DOM to all boxes or input field
+
+  const c1field = document.getElementById("c1");
+  const c2field = document.getElementById("c2");
+  const c3field = document.getElementById("c3");
+  const c4field = document.getElementById("c4");
+  const c5field = document.getElementById("c5");
+  const c6field = document.getElementById("c6");
+  const c7field = document.getElementById("c7");
+  const c8field = document.getElementById("c8");
+  const c9field = document.getElementById("c9");
+
+  const allFields = [
+    c1field,
+    c2field,
+    c3field,
+    c4field,
+    c5field,
+    c6field,
+    c7field,
+    c8field,
+    c9field,
+  ];
+
+  const c1Value = c1field.value;
+  const c2Value = c2field.value;
+  const c3Value = c3field.value;
+  const c4Value = c4field.value;
+  const c5Value = c5field.value;
+  const c6Value = c6field.value;
+  const c7Value = c7field.value;
+  const c8Value = c8field.value;
+  const c9Value = c9field.value;
 
   // Checking if Player X won
   // disable all the other fields
