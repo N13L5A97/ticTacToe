@@ -6,8 +6,8 @@
     --main-border-width: 1rem;
     --main-border-radius: .5rem;
 
-    --cel-background: #87afff;
     --cel-disabled: #3A3A5F;
+
     --x-color: #FF3562;
     --o-color: #ffe62c;
 }
@@ -48,6 +48,17 @@ main > section {
 }
 
 /* inputs */
+ol{
+    display: flex;
+    flex-direction: row;
+    gap: .2rem;
+}
+
+li{
+    list-style: none;
+    position: relative;
+}
+
 input{
     height: 5rem;
     width: 5rem;
@@ -57,19 +68,26 @@ input{
     border-radius: var(--main-border-radius);
     background-color: var(--main-text-color);
     border: none;
+    position: relative;
 }
 
-input:enabled{
-    transition: .2s ease-out;
-}
 
-/* change hover color on turn */
+/* hover state of the input fields */
 input:enabled.xTurn:hover{
     background-color: var(--x-color);
 }
 
 input:enabled.oTurn:hover{
     background-color: var(--o-color);
+}
+
+li:hover::after{
+    content: "X";
+    color: var(--main-text-color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* when inputs are disabled */
@@ -102,6 +120,8 @@ button{
 
     border: none;
     border-radius: var(--main-border-radius);
+
+    position: relative;
 }
 
 button:hover{

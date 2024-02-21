@@ -357,6 +357,10 @@ function check() {
         field.classList.add("xTurn");
         field.classList.remove("oTurn");
       });
+      document.querySelectorAll("li").forEach((field) => {
+        field.classList.add("xLetter");
+        field.classList.remove("oLetter");
+      });
     } else {
       document.getElementById("result").innerHTML = "Player 0 Turn";
       document.querySelectorAll("input").forEach((field) => {
