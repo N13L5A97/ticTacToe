@@ -351,21 +351,24 @@ function check() {
     document.getElementById("result").innerHTML = "It's a Tie";
   } else {
     // Printing Result
+    // add styling for hover X turn 
     if (flag == 1) {
       document.getElementById("result").innerHTML = "Player X Turn";
-      document.querySelectorAll("input").forEach((field) => {
-        field.classList.add("xTurn");
-        field.classList.remove("oTurn");
-      });
       document.querySelectorAll("li").forEach((field) => {
         field.classList.add("xLetter");
         field.classList.remove("oLetter");
+        field.classList.add("xTurn");
+        field.classList.remove("oTurn");
       });
+      // add styling for hover O turn
     } else {
       document.getElementById("result").innerHTML = "Player 0 Turn";
-      document.querySelectorAll("input").forEach((field) => {
+      document.querySelectorAll("li").forEach((field) => {
+        field.classList.add("oLetter");
+        field.classList.remove("XLetter");
         field.classList.add("oTurn");
         field.classList.remove("xTurn");
+
       });
     }
   }
