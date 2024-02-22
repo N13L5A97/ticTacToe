@@ -1,5 +1,31 @@
+// Get all cells of the game
+const c1 = document.getElementById("c1");
+const c2 = document.getElementById("c2");
+const c3 = document.getElementById("c3");
+const c4 = document.getElementById("c4");
+const c5 = document.getElementById("c5");
+const c6 = document.getElementById("c6");
+const c7 = document.getElementById("c7");
+const c8 = document.getElementById("c8");
+const c9 = document.getElementById("c9");
+
+// Create an array of all cells
+const allCells = [
+  c1,
+  c2,
+  c3,
+  c4,
+  c5,
+  c6,
+  c7,
+  c8,
+  c9,
+];
+
 // Check turn and set value
 flag = 1;
+
+// Functions to set value of box
 function setValueC1() {
   if (flag == 1) {
     document.getElementById("c1").value = "X";
@@ -110,134 +136,112 @@ function setValueC9() {
 
 // Function called whenever user tab on any box
 function check() {
-  // Setting DOM to all boxes or input field
+  // Setting DOM to all boxes or input 
 
-  const c1field = document.getElementById("c1");
-  const c2field = document.getElementById("c2");
-  const c3field = document.getElementById("c3");
-  const c4field = document.getElementById("c4");
-  const c5field = document.getElementById("c5");
-  const c6field = document.getElementById("c6");
-  const c7field = document.getElementById("c7");
-  const c8field = document.getElementById("c8");
-  const c9field = document.getElementById("c9");
-
-  const allFields = [
-    c1field,
-    c2field,
-    c3field,
-    c4field,
-    c5field,
-    c6field,
-    c7field,
-    c8field,
-    c9field,
-  ];
-
-  const c1Value = c1field.value;
-  const c2Value = c2field.value;
-  const c3Value = c3field.value;
-  const c4Value = c4field.value;
-  const c5Value = c5field.value;
-  const c6Value = c6field.value;
-  const c7Value = c7field.value;
-  const c8Value = c8field.value;
-  const c9Value = c9field.value;
+  const c1Value = c1.value;
+  const c2Value = c2.value;
+  const c3Value = c3.value;
+  const c4Value = c4.value;
+  const c5Value = c5.value;
+  const c6Value = c6.value;
+  const c7Value = c7.value;
+  const c8Value = c8.value;
+  const c9Value = c9.value;
 
   // Checking if Player X won
-  // disable all the other fields
+  // disable all the other cells
   if (c1Value == "X" && c2Value == "X" && c3Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
-    openFields = [c4field, c5field, c6field, c7field, c8field, c9field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    openCells = [c4, c5, c6, c7, c8, c9];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c1field.classList.add("xWin");
-    c2field.classList.add("xWin");
-    c3field.classList.add("xWin");
+    c1.classList.add("xWin");
+    c2.classList.add("xWin");
+    c3.classList.add("xWin");
   } else if (c1Value == "X" && c4Value == "X" && c7Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
-    const openFields = [c2field, c3field, c5field, c6field, c8field, c9field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const opens = [c2, c3, c5, c6, c8, c9];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c1field.classList.add("xWin");
-    c4field.classList.add("xWin");
-    c7field.classList.add("xWin");
+    c1.classList.add("xWin");
+    c4.classList.add("xWin");
+    c7.classList.add("xWin");
   } else if (c7Value == "X" && c8Value == "X" && c9Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
-    const openFields = [c1field, c2field, c3field, c4field, c5field, c6field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c1, c2, c3, c4, c5, c6];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c7field.classList.add("xWin");
-    c8field.classList.add("xWin");
-    c9field.classList.add("xWin");
+    c7.classList.add("xWin");
+    c8.classList.add("xWin");
+    c9.classList.add("xWin");
   } else if (c3Value == "X" && c6Value == "X" && c9Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
-    const openFields = [c1field, c2field, c4field, c5field, c7field, c8field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c1, c2, c4, c5, c7, c8];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c3field.classList.add("xWin");
-    c6field.classList.add("xWin");
-    c9field.classList.add("xWin");
+    c3.classList.add("xWin");
+    c6.classList.add("xWin");
+    c9.classList.add("xWin");
   } else if (c1Value == "X" && c5Value == "X" && c9Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
-    const openFields = [c2field, c3field, c4field, c6field, c7field, c8field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c2, c3, c4, c6, c7, c8];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c1field.classList.add("xWin");
-    c5field.classList.add("xWin");
-    c9field.classList.add("xWin");
+    c1.classList.add("xWin");
+    c5.classList.add("xWin");
+    c9.classList.add("xWin");
   } else if (c3Value == "X" && c5Value == "X" && c7Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
-    const openFields = [c1field, c2field, c4field, c6field, c8field, c9field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c1, c2, c4, c6, c8, c9];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c3field.classList.add("xWin");
-    c5field.classList.add("xWin");
-    c7field.classList.add("xWin");
+    c3.classList.add("xWin");
+    c5.classList.add("xWin");
+    c7.classList.add("xWin");
   } else if (c2Value == "X" && c5Value == "X" && c8Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
-    const openFields = [c1field, c3field, c4field, c6field, c7field, c9field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c1, c3, c4, c6, c7, c9];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c2field.classList.add("xWin");
-    c5field.classList.add("xWin");
-    c8field.classList.add("xWin");
+    c2.classList.add("xWin");
+    c5.classList.add("xWin");
+    c8.classList.add("xWin");
   } else if (c4Value == "X" && c5Value == "X" && c6Value == "X") {
     document.getElementById("result").innerHTML = "Player X won";
 
-    const openFields = [c1field, c2field, c3field, c7field, c8field, c9field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c1, c2, c3, c7, c8, c9];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c4field.classList.add("xWin");
-    c5field.classList.add("xWin");
-    c6field.classList.add("xWin");
+    c4.classList.add("xWin");
+    c5.classList.add("xWin");
+    c6.classList.add("xWin");
   }
 
   // Checking if Player 0 won
-  // disable all the other fields
+  // disable all the other cells
   else if (
     (c1Value == "O" || c1Value == "O") &&
     (c2Value == "O" || c2Value == "O") &&
@@ -245,14 +249,14 @@ function check() {
   ) {
     document.getElementById("result").innerHTML = "Player O won";
 
-    const openFields = [c4field, c5field, c6field, c7field, c8field, c9field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c4, c5, c6, c7, c8, c9];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c1field.classList.add("oWin");
-    c2field.classList.add("oWin");
-    c3field.classList.add("oWin");
+    c1.classList.add("oWin");
+    c2.classList.add("oWin");
+    c3.classList.add("oWin");
   } else if (
     (c1Value == "O" || c1Value == "O") &&
     (c4Value == "O" || c4Value == "O") &&
@@ -260,80 +264,80 @@ function check() {
   ) {
     document.getElementById("result").innerHTML = "Player O won";
 
-    const openFields = [c2field, c3field, c5field, c6field, c8field, c9field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c2, c3, c5, c6, c8, c9];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c1field.classList.add("oWin");
-    c4field.classList.add("oWin");
-    c7field.classList.add("oWin");
+    c1.classList.add("oWin");
+    c4.classList.add("oWin");
+    c7.classList.add("oWin");
   } else if (c7Value == "O" && c8Value == "O" && c9Value == "O") {
     document.getElementById("result").innerHTML = "Player O won";
 
-    const openFields = [c1field, c2field, c3field, c4field, c5field, c6field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c1, c2, c3, c4, c5, c6];
+    openCells.forEach((cel) => {
+      cel.disabled = true;
     });
 
-    c7field.classList.add("oWin");
-    c8field.classList.add("oWin");
-    c9field.classList.add("oWin");
+    c7.classList.add("oWin");
+    c8.classList.add("oWin");
+    c9.classList.add("oWin");
   } else if (c3Value == "O" && c6Value == "O" && c9Value == "O") {
     document.getElementById("result").innerHTML = "Player O won";
 
-    const openFields = [c1field, c2field, c4field, c5field, c7field, c8field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c1, c2, c4, c5, c7, c8];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c3field.classList.add("oWin");
-    c6field.classList.add("oWin");
-    c9field.classList.add("oWin");
+    c3.classList.add("oWin");
+    c6.classList.add("oWin");
+    c9.classList.add("oWin");
   } else if (c1Value == "O" && c5Value == "O" && c9Value == "O") {
     document.getElementById("result").innerHTML = "Player O won";
 
-    const openFields = [c2field, c3field, c4field, c6field, c7field, c8field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c2, c3, c4, c6, c7, c8];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c1field.classList.add("oWin");
-    c5field.classList.add("oWin");
-    c9field.classList.add("oWin");
+    c1.classList.add("oWin");
+    c5.classList.add("oWin");
+    c9.classList.add("oWin");
   } else if (c3Value == "O" && c5Value == "O" && c7Value == "O") {
     document.getElementById("result").innerHTML = "Player O won";
 
-    const openFields = [c1field, c2field, c4field, c6field, c8field, c9field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c1, c2, c4, c6, c8, c9];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c3field.classList.add("oWin");
-    c5field.classList.add("oWin");
-    c7field.classList.add("oWin");
+    c3.classList.add("oWin");
+    c5.classList.add("oWin");
+    c7.classList.add("oWin");
   } else if (c2Value == "O" && c5Value == "O" && c8Value == "O") {
     document.getElementById("result").innerHTML = "Player O won";
 
-    const openFields = [c1field, c3field, c4field, c6field, c7field, c9field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c1, c3, c4, c6, c7, c9];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c2field.classList.add("oWin");
-    c5field.classList.add("oWin");
-    c8field.classList.add("oWin");
+    c2.classList.add("oWin");
+    c5.classList.add("oWin");
+    c8.classList.add("oWin");
   } else if (c4Value == "O" && c5Value == "O" && c6Value == "O") {
     document.getElementById("result").innerHTML = "Player O won";
 
-    const openFields = [c1field, c2field, c3field, c7field, c8field, c9field];
-    openFields.forEach((field) => {
-      field.disabled = true;
+    const openCells = [c1, c2, c3, c7, c8, c9];
+    openCells.forEach((cell) => {
+      cell.disabled = true;
     });
 
-    c4field.classList.add("oWin");
-    c5field.classList.add("oWin");
-    c6field.classList.add("oWin");
+    c4.classList.add("oWin");
+    c5.classList.add("oWin");
+    c6.classList.add("oWin");
   }
 
   // Checking if there is a tie
@@ -351,24 +355,23 @@ function check() {
     document.getElementById("result").innerHTML = "It's a Tie";
   } else {
     // Printing Result
-    // add styling for hover X turn 
+    // add styling for hover X turn
     if (flag == 1) {
       document.getElementById("result").innerHTML = "Player X Turn";
-      document.querySelectorAll("li").forEach((field) => {
-        field.classList.add("xLetter");
-        field.classList.remove("oLetter");
-        field.classList.add("xTurn");
-        field.classList.remove("oTurn");
+      document.querySelectorAll("li").forEach((cell) => {
+        cell.classList.add("xLetter");
+        cell.classList.remove("oLetter");
+        cell.classList.add("xTurn");
+        cell.classList.remove("oTurn");
       });
       // add styling for hover O turn
     } else {
       document.getElementById("result").innerHTML = "Player O Turn";
-      document.querySelectorAll("li").forEach((field) => {
-        field.classList.add("oLetter");
-        field.classList.remove("XLetter");
-        field.classList.add("oTurn");
-        field.classList.remove("xTurn");
-
+      document.querySelectorAll("li").forEach((cell) => {
+        cell.classList.add("oLetter");
+        cell.classList.remove("XLetter");
+        cell.classList.add("oTurn");
+        cell.classList.remove("xTurn");
       });
     }
   }
@@ -380,10 +383,74 @@ function reset() {
   c1 = c2 = c3 = c4 = c5 = c6 = c7 = c8 = c9 = "";
 
   // remove win class
-  allFields.forEach((field) => {
-    field.classList.remove("oWin");
-    field.classList.remove("xWin");
+  allCells.forEach((cell) => {
+    cell.classList.remove("oWin");
+    cell.classList.remove("xWin");
   });
 }
+
+//create functions on enter for more accessibility
+c1.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    setValueC1();
+    check();
+  }
+});
+
+c2.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    setValueC2();
+    check();
+  }
+});
+
+c3.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    setValueC3();
+    check();
+  }
+});
+
+c4.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    setValueC4();
+    check();
+  }
+});
+
+c5.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    setValueC5();
+    check();
+  }
+});
+
+c6.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    setValueC6();
+    check();
+  }
+});
+
+c7.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    setValueC7();
+    check();
+  }
+});
+
+c8.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    setValueC8();
+    check();
+  }
+});
+
+c9.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    setValueC9();
+    check();
+  }
+});
 
 
