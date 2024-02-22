@@ -2,8 +2,10 @@
     --main-bg-color: #1b1b3a;
     --main-text-color: #eeefff;
 
+    --font-family: 'Roboto', sans-serif;
+
     --border-color: #8789C0;
-    --main-border-width: 1rem;
+    --main-border-width: .1rem;
     --main-border-radius: .5rem;
 
     --cel-disabled: #3A3A5F;
@@ -29,7 +31,7 @@ body{
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
 
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family);
 }
 
 /* title and players */
@@ -75,8 +77,10 @@ input{
     border: none;
     position: relative;
     z-index: 1;
+    font-family: var(--font-family);
 }
 
+/* inputs on hover dynamically with color and letter */
 .xTurn:hover{
     background-color: var(--x-color);
 }
@@ -109,7 +113,6 @@ input{
 input:disabled{
     background-color: var(--cel-disabled);
     color: var(--main-text-color);
-    z-index: 2;
 }
 
 input:disabled.xWin{
@@ -123,30 +126,37 @@ input:disabled.oWin{
 /* reset button */
 button{
     display: flex;
-    margin: 3em auto 0;
+    margin: 2.5rem auto 0;
     padding: .5rem 2rem;
 
-    font-weight: 700;
+    font-weight: bold;
+    font-size: 1.2rem;
     text-transform: uppercase;
 
     cursor: pointer;
 
-    background-color: var(--main-text-color);
+    background-color: var(--main-bg-color);
     color: var(--x-color);
 
-    border: none;
+    border: var(--main-border-width) solid var(--x-color);
     border-radius: var(--main-border-radius);
 
     position: relative;
+    transition: .2s ease-in-out;
 }
 
 button:hover{
     background-color: var(--x-color);
-    color: var(--main-text-color);
+    color: var(--main-bg-color);
+    transform: translateY(-2px);
+    box-shadow: var(--cel-disabled) 0px 10px 15px;
+
+    transition: all .2s ease-in-out;
 }
 
 button:active{
     transform: translateY(2px);
+    transition: .1s ease-in-out;
 }
 
 /* result */

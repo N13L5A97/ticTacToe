@@ -6,7 +6,7 @@ function setValueC1() {
     document.getElementById("c1").disabled = true;
     flag = 0;
   } else {
-    document.getElementById("c1").value = "0";
+    document.getElementById("c1").value = "O";
     document.getElementById("c1").disabled = true;
     flag = 1;
   }
@@ -18,7 +18,7 @@ function setValueC2() {
     document.getElementById("c2").disabled = true;
     flag = 0;
   } else {
-    document.getElementById("c2").value = "0";
+    document.getElementById("c2").value = "O";
     document.getElementById("c2").disabled = true;
     flag = 1;
   }
@@ -30,7 +30,7 @@ function setValueC3() {
     document.getElementById("c3").disabled = true;
     flag = 0;
   } else {
-    document.getElementById("c3").value = "0";
+    document.getElementById("c3").value = "O";
     document.getElementById("c3").disabled = true;
     flag = 1;
   }
@@ -42,7 +42,7 @@ function setValueC4() {
     document.getElementById("c4").disabled = true;
     flag = 0;
   } else {
-    document.getElementById("c4").value = "0";
+    document.getElementById("c4").value = "O";
     document.getElementById("c4").disabled = true;
     flag = 1;
   }
@@ -54,7 +54,7 @@ function setValueC5() {
     document.getElementById("c5").disabled = true;
     flag = 0;
   } else {
-    document.getElementById("c5").value = "0";
+    document.getElementById("c5").value = "O";
     document.getElementById("c5").disabled = true;
     flag = 1;
   }
@@ -66,7 +66,7 @@ function setValueC6() {
     document.getElementById("c6").disabled = true;
     flag = 0;
   } else {
-    document.getElementById("c6").value = "0";
+    document.getElementById("c6").value = "O";
     document.getElementById("c6").disabled = true;
     flag = 1;
   }
@@ -78,7 +78,7 @@ function setValueC7() {
     document.getElementById("c7").disabled = true;
     flag = 0;
   } else {
-    document.getElementById("c7").value = "0";
+    document.getElementById("c7").value = "O";
     document.getElementById("c7").disabled = true;
     flag = 1;
   }
@@ -90,7 +90,7 @@ function setValueC8() {
     document.getElementById("c8").disabled = true;
     flag = 0;
   } else {
-    document.getElementById("c8").value = "0";
+    document.getElementById("c8").value = "O";
     document.getElementById("c8").disabled = true;
     flag = 1;
   }
@@ -102,7 +102,7 @@ function setValueC9() {
     document.getElementById("c9").disabled = true;
     flag = 0;
   } else {
-    document.getElementById("c9").value = "0";
+    document.getElementById("c9").value = "O";
     document.getElementById("c9").disabled = true;
     flag = 1;
   }
@@ -239,11 +239,11 @@ function check() {
   // Checking if Player 0 won
   // disable all the other fields
   else if (
-    (c1Value == "0" || c1Value == "0") &&
-    (c2Value == "0" || c2Value == "0") &&
-    (c3Value == "0" || c3Value == "0")
+    (c1Value == "O" || c1Value == "O") &&
+    (c2Value == "O" || c2Value == "O") &&
+    (c3Value == "O" || c3Value == "O")
   ) {
-    document.getElementById("result").innerHTML = "Player 0 won";
+    document.getElementById("result").innerHTML = "Player O won";
 
     const openFields = [c4field, c5field, c6field, c7field, c8field, c9field];
     openFields.forEach((field) => {
@@ -254,11 +254,11 @@ function check() {
     c2field.classList.add("oWin");
     c3field.classList.add("oWin");
   } else if (
-    (c1Value == "0" || c1Value == "0") &&
-    (c4Value == "0" || c4Value == "0") &&
-    (c7Value == "0" || c7Value == "0")
+    (c1Value == "O" || c1Value == "O") &&
+    (c4Value == "O" || c4Value == "O") &&
+    (c7Value == "O" || c7Value == "O")
   ) {
-    document.getElementById("result").innerHTML = "Player 0 won";
+    document.getElementById("result").innerHTML = "Player O won";
 
     const openFields = [c2field, c3field, c5field, c6field, c8field, c9field];
     openFields.forEach((field) => {
@@ -268,8 +268,8 @@ function check() {
     c1field.classList.add("oWin");
     c4field.classList.add("oWin");
     c7field.classList.add("oWin");
-  } else if (c7Value == "0" && c8Value == "0" && c9Value == "0") {
-    document.getElementById("result").innerHTML = "Player 0 won";
+  } else if (c7Value == "O" && c8Value == "O" && c9Value == "O") {
+    document.getElementById("result").innerHTML = "Player O won";
 
     const openFields = [c1field, c2field, c3field, c4field, c5field, c6field];
     openFields.forEach((field) => {
@@ -279,8 +279,8 @@ function check() {
     c7field.classList.add("oWin");
     c8field.classList.add("oWin");
     c9field.classList.add("oWin");
-  } else if (c3Value == "0" && c6Value == "0" && c9Value == "0") {
-    document.getElementById("result").innerHTML = "Player 0 won";
+  } else if (c3Value == "O" && c6Value == "O" && c9Value == "O") {
+    document.getElementById("result").innerHTML = "Player O won";
 
     const openFields = [c1field, c2field, c4field, c5field, c7field, c8field];
     openFields.forEach((field) => {
@@ -290,8 +290,8 @@ function check() {
     c3field.classList.add("oWin");
     c6field.classList.add("oWin");
     c9field.classList.add("oWin");
-  } else if (c1Value == "0" && c5Value == "0" && c9Value == "0") {
-    document.getElementById("result").innerHTML = "Player 0 won";
+  } else if (c1Value == "O" && c5Value == "O" && c9Value == "O") {
+    document.getElementById("result").innerHTML = "Player O won";
 
     const openFields = [c2field, c3field, c4field, c6field, c7field, c8field];
     openFields.forEach((field) => {
@@ -301,8 +301,8 @@ function check() {
     c1field.classList.add("oWin");
     c5field.classList.add("oWin");
     c9field.classList.add("oWin");
-  } else if (c3Value == "0" && c5Value == "0" && c7Value == "0") {
-    document.getElementById("result").innerHTML = "Player 0 won";
+  } else if (c3Value == "O" && c5Value == "O" && c7Value == "O") {
+    document.getElementById("result").innerHTML = "Player O won";
 
     const openFields = [c1field, c2field, c4field, c6field, c8field, c9field];
     openFields.forEach((field) => {
@@ -312,8 +312,8 @@ function check() {
     c3field.classList.add("oWin");
     c5field.classList.add("oWin");
     c7field.classList.add("oWin");
-  } else if (c2Value == "0" && c5Value == "0" && c8Value == "0") {
-    document.getElementById("result").innerHTML = "Player 0 won";
+  } else if (c2Value == "O" && c5Value == "O" && c8Value == "O") {
+    document.getElementById("result").innerHTML = "Player O won";
 
     const openFields = [c1field, c3field, c4field, c6field, c7field, c9field];
     openFields.forEach((field) => {
@@ -323,8 +323,8 @@ function check() {
     c2field.classList.add("oWin");
     c5field.classList.add("oWin");
     c8field.classList.add("oWin");
-  } else if (c4Value == "0" && c5Value == "0" && c6Value == "0") {
-    document.getElementById("result").innerHTML = "Player 0 won";
+  } else if (c4Value == "O" && c5Value == "O" && c6Value == "O") {
+    document.getElementById("result").innerHTML = "Player O won";
 
     const openFields = [c1field, c2field, c3field, c7field, c8field, c9field];
     openFields.forEach((field) => {
@@ -338,15 +338,15 @@ function check() {
 
   // Checking if there is a tie
   else if (
-    (c1Value == "X" || c1Value == "0") &&
-    (c2Value == "X" || c2Value == "0") &&
-    (c3Value == "X" || c3Value == "0") &&
-    (c4Value == "X" || c4Value == "0") &&
-    (c5Value == "X" || c5Value == "0") &&
-    (c6Value == "X" || c6Value == "0") &&
-    (c7Value == "X" || c7Value == "0") &&
-    (c8Value == "X" || c8Value == "0") &&
-    (c9Value == "X" || c9Value == "0")
+    (c1Value == "X" || c1Value == "O") &&
+    (c2Value == "X" || c2Value == "O") &&
+    (c3Value == "X" || c3Value == "O") &&
+    (c4Value == "X" || c4Value == "O") &&
+    (c5Value == "X" || c5Value == "O") &&
+    (c6Value == "X" || c6Value == "O") &&
+    (c7Value == "X" || c7Value == "O") &&
+    (c8Value == "X" || c8Value == "O") &&
+    (c9Value == "X" || c9Value == "O")
   ) {
     document.getElementById("result").innerHTML = "It's a Tie";
   } else {
@@ -362,7 +362,7 @@ function check() {
       });
       // add styling for hover O turn
     } else {
-      document.getElementById("result").innerHTML = "Player 0 Turn";
+      document.getElementById("result").innerHTML = "Player O Turn";
       document.querySelectorAll("li").forEach((field) => {
         field.classList.add("oLetter");
         field.classList.remove("XLetter");
