@@ -35,10 +35,31 @@ body{
 }
 
 /* title and players */
-header > section{
+header{
     display: flex;
-    gap: 2em;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+header section{
+    display: flex;
+    gap: 5em;
     justify-content: center;
+}
+
+header section p{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+header section p:first-child{
+    color: var(--x-color);
+}
+
+header section p:last-child{
+    color: var(--o-color);
 }
 
 /* Game section */
@@ -74,10 +95,19 @@ input{
     cursor: pointer;
     border-radius: var(--main-border-radius);
     background-color: transparent;
-    border: none;
+    border: solid;
     position: relative;
     z-index: 1;
     font-family: var(--font-family);
+}
+
+.xTurn input:focus{
+    outline: 2px solid var(--x-color);
+
+}
+
+.oTurn input:focus{
+    outline: 2px solid var(--o-color);
 }
 
 /* inputs on hover dynamically with color and letter */
